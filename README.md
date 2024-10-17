@@ -23,7 +23,7 @@ object-creation game! 🛠️✨
 
 1. **🥇 Singleton**  
    The "only one" friend. Ensures a class has just **one instance**, like a VIP who doesn't do duplicates. Exclusive
-   access only! 🔑
+   access only! 🔑<br/>
 
 2. **☕ Factory Method**  
    Think of it as a **barista** taking your order. You say what type of drink you want, and it whips up the right one —
@@ -45,6 +45,11 @@ object-creation game! 🛠️✨
 
 *These patterns are your **superpowers** 🦸‍♂️ for handling object creation, keeping your code sleek, clean, and
 drama-free! 💥*
+
+## *⭐ Let's understand all design patterns in details*
+### [Singleton Design Pattern](/dp-singleton/singleton.md)
+### [Factory Design Pattern](/dp-factory/factory.md)
+
 
 
 <br/>
