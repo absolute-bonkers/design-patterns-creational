@@ -6,4 +6,5 @@ pluginManagement {
 	}
 }
 rootProject.name = 'design-patterns-creational'
-include 'singleton'
+include 'dp-singleton'
+include 'dp-factory'
