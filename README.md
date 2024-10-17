@@ -1,14 +1,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-<p align='left'>
-<a href="#">
-  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/absolute-bonkers/design-patterns-creational?style=for-the-badge">
-</a>&nbsp;&nbsp;
-</p>
+![GitHub watchers](https://img.shields.io/github/watchers/absolute-bonkers/design-patterns-creational)
+![GitHub Repo stars](https://img.shields.io/github/stars/absolute-bonkers/design-patterns-creational)
+![GitHub Repo forks](https://img.shields.io/github/forks/absolute-bonkers/design-patterns-creational)
 
 ---
 
 ## 🎨 Creational Design Patterns
-
 
 ****Design patterns*** are like cheat codes for coding problems! <br/>
 They’re tried-and-true solutions to common software design challenges,
