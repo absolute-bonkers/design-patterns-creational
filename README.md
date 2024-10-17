@@ -1,20 +1,22 @@
-## __Creational Design Patterns__
-
-```@author and curator: Aditya Chandeliya```
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <p align='left'>
-  <a href="#">
+<a href="#">
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/absolute-bonkers/design-patterns-creational?style=for-the-badge">
 </a>&nbsp;&nbsp;
 </p>
 
 ---
-*Design patterns are like cheat codes for coding problems! <br/>
+
+## 🎨 Creational Design Patterns
+
+
+****Design patterns*** are like cheat codes for coding problems! <br/>
 They’re tried-and-true solutions to common software design challenges,
 making your code cleaner, easier to maintain, and more flexible. <br/>
 Think of them as blueprints, split into creational, structural, and behavioral categories,
 each helping you level up your coding game in different ways.*
 
-## 🎨 Creational Design Patterns
+### *Creational Design Patterns*
 
 Creational design patterns are like your **personal object factory!** Instead of chaotically creating objects all over
 the place, these patterns give you **control** over how and when your objects are born. Think of it as leveling up your
