@@ -1,13 +1,13 @@
-package com.absolute.bonkers.designpatternscreational;
+package com.absolute.bonkers.singleton;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DesignPatternsCreationalApplication {
+public class SingletonApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DesignPatternsCreationalApplication.class, args);
+		SpringApplication.run(SingletonApplication.class, args);
 	}
 
 }
