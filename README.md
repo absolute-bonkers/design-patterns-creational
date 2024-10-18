@@ -49,6 +49,9 @@ drama-free! 💥*
 ## *⭐ Let's understand all design patterns in details*
 ### [Singleton Design Pattern](/dp-singleton/singleton.md)
 ### [Factory Design Pattern](/dp-factory/factory.md)
+### [Abstract Factory Design Pattern](/dp-abstract-factory/abstract-factory.md)
+### [Prototype Design Pattern](/dp-prototype/prototype.md)
+### [Builder Design Pattern](/dp-builder/builder.md)
 
 
 

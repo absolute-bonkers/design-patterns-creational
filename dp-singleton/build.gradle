@@ -16,7 +16,7 @@ dependencies {
 }
 
 springBoot {
-    mainClass = 'com.absolute.bonkers.singleton.SingletonApplication' // Adjust accordingly
+    mainClass = 'com.absolute.bonkers.singleton.SingletonApplication'
 }
 
 java {

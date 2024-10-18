@@ -13,7 +13,7 @@ dependencies {
 }
 
 springBoot {
-	mainClass = 'com.absolute.bonkers.factory.AbstractFactoryApplication'
+	mainClass = 'com.absolute.bonkers.factory.BuilderApplication'
 }
 
 java {
