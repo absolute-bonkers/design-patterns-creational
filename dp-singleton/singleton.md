@@ -35,9 +35,9 @@ it’s available from the get-go.*
 #### 💻 Example:
 
 Implementation Class:
-*[EagerDatabaseConnectionPool](/src/main/java/com/absolute/bonkers/singleton/eager/EagerDatabaseConnectionPool.java)*
+*[EagerDatabaseConnectionPool.java](/dp-singleton/src/main/java/com/absolute/bonkers/singleton/eager/EagerDatabaseConnectionPool.java)*<br/>
 Test Class:
-*[EagerDatabaseConnectionPoolTest](/src/test/java/com/absolute/bonkers/singleton/eager/EagerDatabaseConnectionPoolTest.java)*
+*[EagerDatabaseConnectionPoolTest.java](/dp-singleton/src/test/java/com/absolute/bonkers/singleton/eager/EagerDatabaseConnectionPoolTest.java)*<br/>
 
 ### 💤 Lazy Initialization
 
@@ -50,9 +50,9 @@ This is more resource-efficient but requires additional care for thread safety i
 #### 💻 Example:
 
 Implementation Class:
-*[LazyDatabaseConnectionPool](/src/main/java/com/absolute/bonkers/singleton/lazy/LazyDatabaseConnectionPool.java)*
+*[LazyDatabaseConnectionPool.java](/dp-singleton/src/main/java/com/absolute/bonkers/singleton/lazy/LazyDatabaseConnectionPool.java)*<br/>
 Test Class:
-*[EagerDatabaseConnectionPoolTest](/src/test/java/com/absolute/bonkers/singleton/lazy/LazyDatabaseConnectionPoolTest.java)*
+*[EagerDatabaseConnectionPoolTest.java](/dp-singleton/src/test/java/com/absolute/bonkers/singleton/lazy/LazyDatabaseConnectionPoolTest.java)*<br/>
 
 ### 🧠 Which One to Use?
 
