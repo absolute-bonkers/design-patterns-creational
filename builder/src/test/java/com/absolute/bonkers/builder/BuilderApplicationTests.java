@@ -1,4 +1,4 @@
-package com.absolute.bonkers.factory;
+package com.absolute.bonkers.builder;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

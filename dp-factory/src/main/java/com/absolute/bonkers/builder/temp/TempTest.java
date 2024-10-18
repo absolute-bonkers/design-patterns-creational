@@ -1,4 +1,4 @@
-package com.absolute.bonkers.factory.temp;
+package com.absolute.bonkers.builder.temp;
 
 import lombok.Builder;
 import lombok.Getter;

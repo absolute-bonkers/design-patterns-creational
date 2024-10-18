@@ -8,3 +8,7 @@ pluginManagement {
 rootProject.name = 'design-patterns-creational'
 include 'dp-singleton'
 include 'dp-factory'
+include 'dp-abstract-factory'
+include 'dp-prototype'
+include 'builder'
+

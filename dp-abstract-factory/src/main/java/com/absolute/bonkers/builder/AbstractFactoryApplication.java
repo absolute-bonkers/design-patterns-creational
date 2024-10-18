@@ -1,13 +1,13 @@
-package com.absolute.bonkers.factory;
+package com.absolute.bonkers.builder;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FactoryApplication {
+public class AbstractFactoryApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FactoryApplication.class, args);
+		SpringApplication.run(AbstractFactoryApplication.class, args);
 	}
 
 }
