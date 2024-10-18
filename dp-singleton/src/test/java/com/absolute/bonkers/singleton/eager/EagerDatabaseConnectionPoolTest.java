@@ -17,6 +17,9 @@ class EagerDatabaseConnectionPoolTest {
   @Test
   void shouldInitialiseEagerDatabaseConnectionPool() {
     ConnectionPool connectionPool = eagerDatabaseConnectionPool.getConnectionPool();
+
+    // Since the Connection Pool was created at the time of application run it will contain default
+    // information
     Assertions.assertThat(connectionPool.getPoolType()).isEqualTo(PoolType.DATABASE);
   }
 }
