@@ -1,5 +1,6 @@
 package com.absolute.bonkers.singleton.lazy;
 
+import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import com.absolute.bonkers.singleton.ConnectionPool;
@@ -7,23 +8,23 @@ import com.absolute.bonkers.singleton.PoolType;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.*;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class LazyDatabaseConnectionPoolTest {
 
-  @Autowired LazyDatabaseConnectionPool lazyDatabaseConnectionPool;
-
   @Test
   void shouldInitialiseLazeConnectionPoolOnDemand() {
-    ConnectionPool anotherPool =
-        lazyDatabaseConnectionPool.getConnectionPool(PoolType.EXTERNAL_API);
+    ConnectionPool connectionPool1 =
+        LazyDatabaseConnectionPool.getConnectionPool(PoolType.EXTERNAL_API);
 
-    Assertions.assertThat(anotherPool.getPoolType()).isNotEqualTo(PoolType.DATABASE);
-    Assertions.assertThat(anotherPool.getPoolType()).isEqualTo(PoolType.EXTERNAL_API);
+    ConnectionPool connectionPool2 =
+        LazyDatabaseConnectionPool.getConnectionPool(PoolType.DATABASE);
+
+    assertThat(connectionPool1.getPoolType()).isEqualTo(PoolType.EXTERNAL_API);
+    assertThat(connectionPool2.getPoolType()).isNotEqualTo(PoolType.DATABASE);
+    assertThat(connectionPool1.hashCode()).isEqualTo(connectionPool2.hashCode());
   }
 
   @Test
