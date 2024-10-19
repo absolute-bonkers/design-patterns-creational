@@ -34,7 +34,7 @@ it’s available from the get-go.*
 
 #### 💻 Example:
 
-*Here is an illustration of lazy implementation.*<br/>
+*Here is an illustration of eager implementation.*<br/>
 We have a **EagerDatabaseConnectionPool** service which is responsible to make connection to database (for demonstration),
 Once instance is created it provides a ConnectionPool response.
 
