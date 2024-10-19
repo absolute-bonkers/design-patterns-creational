@@ -1,5 +1,6 @@
 package com.absolute.bonkers.singleton;
 
+import java.io.Serializable;
 import java.sql.Connection;
 import java.util.UUID;
 import lombok.Builder;
@@ -7,7 +8,7 @@ import lombok.Value;
 
 @Value
 @Builder
-public class ConnectionPool {
+public class ConnectionPool implements Serializable {
 
   String poolId;
   PoolType poolType;

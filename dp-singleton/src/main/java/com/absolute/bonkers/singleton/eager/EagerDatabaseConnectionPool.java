@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 @Getter
 @Slf4j
 @Service
-public class EagerDatabaseConnectionPool {
+public class EagerDatabaseConnectionPool implements Cloneable {
   /** Initialising the Bean at the time of application startup only */
   private final ConnectionPool connectionPool = ConnectionPool.createPool(PoolType.DATABASE);
 
@@ -22,5 +22,14 @@ public class EagerDatabaseConnectionPool {
     log.info(
         "Eager Database connection pool initialization is successful with poolId: %s, and poolType: %s"
             .formatted(this.connectionPool.getPoolId(), this.connectionPool.getPoolType()));
+  }
+
+  /**
+   * if we need to break singleton pattern via clone method, we need to allow access to clone()
+   * method outside the Class and implement Cloneable interface
+   */
+  @Override
+  public Object clone() throws CloneNotSupportedException {
+    return super.clone();
   }
 }

@@ -39,3 +39,5 @@ Thumbs.db
 *.ipr
 *.idea/workspace.xml
 *.idea/libraries
+
+*temp.ob

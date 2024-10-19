@@ -47,13 +47,18 @@ object-creation game! 🛠️✨
 drama-free! 💥*
 
 ## *⭐ Let's understand all design patterns in details*
+
 ### [Singleton Design Pattern](/dp-singleton/singleton.md)
+
+#### [Also See Breaking Singleton Design Patterns](/dp-singleton/break-singleton-pattern.md)
+
 ### [Factory Design Pattern](/dp-factory/factory.md)
+
 ### [Abstract Factory Design Pattern](/dp-abstract-factory/abstract-factory.md)
+
 ### [Prototype Design Pattern](/dp-prototype/prototype.md)
+
 ### [Builder Design Pattern](/dp-builder/builder.md)
-
-
 
 <br/>
 <br/>

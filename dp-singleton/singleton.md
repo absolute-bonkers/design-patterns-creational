@@ -69,6 +69,13 @@ Test Class:
 
 ---
 
+## 🤯 Do you want to break existing singleton pattern?
+
+### *See here 👉🏻 [Need and ways of breaking singleton pattern](/dp-singleton/break-singleton-pattern.md)*
+
+---
+
+
 ### 🌈 Summary
 
 *In the realm of coding, the Singleton pattern is your go-to strategy for managing resources effectively.<br/>
