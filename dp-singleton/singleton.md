@@ -34,6 +34,10 @@ it’s available from the get-go.*
 
 #### 💻 Example:
 
+*Here is an illustration of lazy implementation.*<br/>
+We have a **EagerDatabaseConnectionPool** service which is responsible to make connection to database (for demonstration),
+Once instance is created it provides a ConnectionPool response.
+
 Implementation Class:
 *[EagerDatabaseConnectionPool.java](/dp-singleton/src/main/java/com/absolute/bonkers/singleton/eager/EagerDatabaseConnectionPool.java)*<br/>
 Test Class:
@@ -49,10 +53,14 @@ This is more resource-efficient but requires additional care for thread safety i
 
 #### 💻 Example:
 
+*Here is an illustration of lazy implementation.*<br/>
+We have a **LazyDatabaseConnectionPool** service which is responsible to make connection to database (for demonstration),
+Once instance is created it provides a ConnectionPool response.
+
 Implementation Class:
 *[LazyDatabaseConnectionPool.java](/dp-singleton/src/main/java/com/absolute/bonkers/singleton/lazy/LazyDatabaseConnectionPool.java)*<br/>
 Test Class:
-*[EagerDatabaseConnectionPoolTest.java](/dp-singleton/src/test/java/com/absolute/bonkers/singleton/lazy/LazyDatabaseConnectionPoolTest.java)*<br/>
+*[LazyDatabaseConnectionPoolTest.java](/dp-singleton/src/test/java/com/absolute/bonkers/singleton/lazy/LazyDatabaseConnectionPoolTest.java)*<br/>
 
 ### 🧠 Which One to Use?
 

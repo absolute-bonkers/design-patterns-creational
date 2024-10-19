@@ -6,6 +6,11 @@ import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+/**
+ * This service will be initiated at the time of application startup, as it declares and defines
+ * ConnectionPool at the same time Each time we try to get ConnectionPool it will give the same
+ * instance
+ */
 @Getter
 @Slf4j
 @Service

@@ -6,6 +6,11 @@ import java.util.Objects;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+/**
+ * This service will be initiated at the time we request to get ConnectionPool for the first time.
+ * Once we request for ConnectionPool, it will provide the same instance of ConnectionPool every
+ * time after initialization.
+ */
 @Slf4j
 @Service
 public class LazyDatabaseConnectionPool {
