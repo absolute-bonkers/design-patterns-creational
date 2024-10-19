@@ -1,49 +1,54 @@
 plugins {
-	id 'java'
-	id 'org.springframework.boot' version '3.4.0-SNAPSHOT'
-	id 'io.spring.dependency-management' version '1.1.6'
+    id 'java'
+    id 'org.springframework.boot' version '3.4.0-SNAPSHOT'
+    id 'io.spring.dependency-management' version '1.1.6'
 }
 
 ext {
-	springVersion = '3.3.4'
-	lombokVersion = '1.18.34'
-	junitVersion =  '1.11.2'
+    springVersion = '3.3.4'
+    lombokVersion = '1.18.34'
+    junitVersion = '1.11.2'
+    springWebVersion = '6.1.14'
+    logCaptorVersion = '2.9.3'
 }
 
 dependencies {
-	implementation "org.springframework.boot:spring-boot-starter:$springVersion"
-	implementation "org.springframework.boot:spring-boot-starter-logging:$springVersion"
+    implementation "org.springframework.boot:spring-boot-starter:$springVersion"
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-logging', version: "$springVersion"
+    implementation group: 'org.springframework', name: 'spring-web', version: "$springWebVersion"
 
-	compileOnly "org.projectlombok:lombok:$lombokVersion"
-	annotationProcessor "org.projectlombok:lombok:$lombokVersion"
-	testImplementation "org.springframework.boot:spring-boot-starter-test:$springVersion"
-	testRuntimeOnly "org.junit.platform:junit-platform-launcher:$junitVersion"
+
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+    testImplementation "org.springframework.boot:spring-boot-starter-test:$springVersion"
+    testImplementation "io.github.hakky54:logcaptor:$logCaptorVersion"
+    testRuntimeOnly "org.junit.platform:junit-platform-launcher:$junitVersion"
 
 }
 
 springBoot {
-	mainClass = 'com.absolute.bonkers.factory.FactoryApplication'
+    mainClass = 'com.absolute.bonkers.factory.FactoryApplication'
 }
 
 java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
-	}
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
 }
 
 configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
-	}
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
 }
 
 repositories {
-	mavenCentral()
-	maven { url 'https://repo.spring.io/milestone' }
-	maven { url 'https://repo.spring.io/snapshot' }
+    mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'https://repo.spring.io/snapshot' }
 }
 
 
 tasks.named('test') {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
