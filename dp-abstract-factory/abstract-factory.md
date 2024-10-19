@@ -18,6 +18,90 @@ The Abstract Factory Pattern allows you to create a series of related or depende
     • Interchangeability: Easily swap one family of objects with another. Need to switch from “Modern” to “Victorian” style furniture? Just switch the factory—no code rewiring needed! 🔄
     • Loose Coupling: Your client code doesn’t need to know the details of how objects are created. It simply works with interfaces, making your code flexible and resilient to changes. 📦
 
+---
+#### 💻 Example
+
+*here is an illustration of abstract factory pattern*
+
+The use case focuses on supporting multiple payment gateways (like PAYPAL and STRIPE) where each gateway provides specific implementations for two key services:
+
+	1.	PaymentService: Handles payment processing.
+	2.	RefundService: Handles refund processing.
+
+The Abstract Factory Pattern is used to ensure that related services (e.g., payment and refund) are grouped together for each gateway, allowing for easy extensibility as new gateways are added.
+
+Interfaces:
+- *[PaymentService.java (interface)](/dp-abstract-factory/src/main/java/com/absolute/bonkers/abstractfactory/PaymentService.java)*<br>
+- *[RefundService.java (interface)](/dp-abstract-factory/src/main/java/com/absolute/bonkers/abstractfactory/RefundService.java)*<br>
+- *[PaymentGatewayFactory.java (interface)](/dp-abstract-factory/src/main/java/com/absolute/bonkers/abstractfactory/factories/PaymentGatewayFactory.java)*<br>
+
+Factories:
+- *[PaypalFactory.java](/dp-abstract-factory/src/main/java/com/absolute/bonkers/abstractfactory/factories/PaypalFactory.java)*<br>
+- *[StripeFactory.java](/dp-abstract-factory/src/main/java/com/absolute/bonkers/abstractfactory/factories/StripeFactory.java)*<br>
+
+Services:
+- *[PaypalPaymentService.java](/dp-abstract-factory/src/main/java/com/absolute/bonkers/abstractfactory/paypal/PaypalPaymentService.java)*<br>
+- *[PaypalRefundService.java](/dp-abstract-factory/src/main/java/com/absolute/bonkers/abstractfactory/paypal/PaypalRefundService.java)*<br>
+- *[StripePaymentService.java](/dp-abstract-factory/src/main/java/com/absolute/bonkers/abstractfactory/stripe/StripePaymentService.java)*<br>
+- *[StripeRefundService.java](/dp-abstract-factory/src/main/java/com/absolute/bonkers/abstractfactory/stripe/StripeRefundService.java)*<br>
+
+Test Class:
+- *[PaymentProcessServiceTest.java](/dp-abstract-factory/src/test/java/com/absolute/bonkers/abstractfactory/PaymentProcessServiceTest.java)*<br>
+
+*Class diagram below of the use-case*
+
+```mermaid
+classDiagram
+    class PaymentService {
+      <<interface>>
+      +processPayment(amount: double)
+    }
+
+    class RefundService {
+      <<interface>>
+      +processRefund(transactionId: String)
+    }
+
+    class PayPalPaymentService {
+      +processPayment(amount: double)
+    }
+
+    class StripePaymentService {
+      +processPayment(amount: double)
+    }
+
+    class PayPalRefundService {
+      +processRefund(transactionId: String)
+    }
+
+    class StripeRefundService {
+      +processRefund(transactionId: String)
+    }
+
+    class PaymentGatewayFactory {
+      <<interface>>
+      +createPaymentService(): PaymentService
+      +createRefundService(): RefundService
+    }
+
+    class PayPalFactory {
+      +createPaymentService(): PaymentService
+      +createRefundService(): RefundService
+    }
+
+    class StripeFactory {
+      +createPaymentService(): PaymentService
+      +createRefundService(): RefundService
+    }
+
+    PaymentGatewayFactory <|-- PayPalFactory
+    PaymentGatewayFactory <|-- StripeFactory
+    PaymentService <|-- PayPalPaymentService
+    PaymentService <|-- StripePaymentService
+    RefundService <|-- PayPalRefundService
+    RefundService <|-- StripeRefundService
+```
+
 ### 🌈 Summary
 
 *In the world of software design, the Abstract Factory Pattern is your go-to for creating consistent and interchangeable families of objects.<br/>
