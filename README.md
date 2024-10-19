@@ -50,7 +50,7 @@ drama-free! 💥*
 
 ### [Singleton Design Pattern](/dp-singleton/singleton.md)
 
-Also See 👉🏻 #### [Breaking Singleton Design Patterns](/dp-singleton/break-singleton-pattern.md)
+Also See 👉🏻 [Breaking Singleton Design Patterns](/dp-singleton/break-singleton-pattern.md)
 
 ### [Factory Design Pattern](/dp-factory/factory.md)
 
