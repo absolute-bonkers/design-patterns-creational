@@ -15,9 +15,17 @@ each helping you level up your coding game in different ways.*
 
 ### *Creational Design Patterns*
 
+*Examples built with Java 21 and Spring Boot.* ☕
+
 Creational design patterns are like your **personal object factory!** Instead of chaotically creating objects all over
 the place, these patterns give you **control** over how and when your objects are born. Think of it as leveling up your
 object-creation game! 🛠️✨
+
+This repository is part of a three-part GoF design patterns series:
+
+- [Creational patterns](https://github.com/absolute-bonkers/design-patterns-creational) (this repository)
+- [Structural patterns](https://github.com/absolute-bonkers/design-patterns-structural)
+- [Behavioral patterns](https://github.com/absolute-bonkers/design-patterns-behavioral)
 
 ### Here's the squad:
 
@@ -62,6 +70,59 @@ Also See 👉🏻 [Breaking Singleton Design Patterns](/dp-singleton/break-singl
 
 <br/>
 <br/>
+
+## 🧩 The complete GoF design-pattern collection
+
+Want to explore the whole squad? The 23 classic patterns are split across these three repositories:
+
+### 🎨 Creational — creating objects without the chaos
+
+1. [Singleton](/dp-singleton/singleton.md) — one shared instance, VIP-style 🔑
+2. [Factory Method](/dp-factory/factory.md) — delegate which product gets made ☕
+3. [Abstract Factory](/dp-abstract-factory/abstract-factory.md) — create families of related products together 🏗️
+4. [Builder](/dp-builder/builder.md) — assemble a complex object one step at a time 🥪
+5. [Prototype](/dp-prototype/prototype.md) — make a new object by copying an existing one 🧬
+
+### 🧱 Structural — making objects fit together
+
+Explore [Adapter](https://github.com/absolute-bonkers/design-patterns-structural/tree/main/adapter),
+[Bridge](https://github.com/absolute-bonkers/design-patterns-structural/tree/main/bridge),
+[Composite](https://github.com/absolute-bonkers/design-patterns-structural/tree/main/composite),
+[Decorator](https://github.com/absolute-bonkers/design-patterns-structural/tree/main/decorator),
+[Facade](https://github.com/absolute-bonkers/design-patterns-structural/tree/main/facade),
+[Flyweight](https://github.com/absolute-bonkers/design-patterns-structural/tree/main/flyweight), and
+[Proxy](https://github.com/absolute-bonkers/design-patterns-structural/tree/main/proxy). 🧩
+
+### 🤝 Behavioral — getting objects to work as a team
+
+Explore [Chain of Responsibility](https://github.com/absolute-bonkers/design-patterns-behavioral/tree/main/chain-of-responsibility),
+[Command](https://github.com/absolute-bonkers/design-patterns-behavioral/tree/main/command),
+[Interpreter](https://github.com/absolute-bonkers/design-patterns-behavioral/tree/main/interpreter),
+[Iterator](https://github.com/absolute-bonkers/design-patterns-behavioral/tree/main/iterator),
+[Mediator](https://github.com/absolute-bonkers/design-patterns-behavioral/tree/main/mediator),
+[Memento](https://github.com/absolute-bonkers/design-patterns-behavioral/tree/main/memento),
+[Observer](https://github.com/absolute-bonkers/design-patterns-behavioral/tree/main/observer),
+[State](https://github.com/absolute-bonkers/design-patterns-behavioral/tree/main/state),
+[Strategy](https://github.com/absolute-bonkers/design-patterns-behavioral/tree/main/strategy),
+[Template Method](https://github.com/absolute-bonkers/design-patterns-behavioral/tree/main/template-method), and
+[Visitor](https://github.com/absolute-bonkers/design-patterns-behavioral/tree/main/visitor). ✨
+
+All three collections target **Java 21**. The other repositories include focused Java examples, tests, and chapter guides;
+Spring Boot is used where it helps show the pattern in a realistic application.
+
+### 🚀 Build and test
+
+Install JDK 21, then run the bundled Gradle Wrapper from this repository:
+
+```sh
+./gradlew build
+./gradlew test
+./gradlew :dp-builder:test
+```
+
+No system Gradle installation is needed—the wrapper downloads the pinned Gradle 9.8.1 distribution and verifies its
+SHA-256 checksum the first time you run it.
+
 <br/>
 <br/>
 

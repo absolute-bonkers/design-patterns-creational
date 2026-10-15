@@ -1,13 +1,11 @@
-package com.absolute.bonkers.builder;
+package com.absolute.bonkers.prototype;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SingletonApplicationTests {
+class PrototypeApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
-
+  @Test
+  void contextLoads() {}
 }

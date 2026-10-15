@@ -33,7 +33,24 @@ stateDiagram-v2
     NotificationInterface --> EmailNotification
 ```
 
-### ***We can provide minimal information to choose implementation dynamically with [Factory implementation](/dp-factory/src/main/java/com/absolute/bonkers/factory/NotificationFactory.java)***
+The original Spring example uses a notification registry to select a bean from a type. That's a useful **Simple Factory** approach, but it is not the GoF Factory Method pattern: a single creator chooses the implementation instead of subclasses overriding a creation method.
+
+### ☕ The GoF Factory Method
+
+In the Factory Method version, the base creator defines the workflow and leaves product creation to specialized creators. Each creator decides which notification product to return:
+
+```java
+NotificationCreator creator = new EmailNotificationCreator();
+creator.sendNotification("Your order has shipped");
+```
+
+- Creator: [NotificationCreator.java](/dp-factory/src/main/java/com/absolute/bonkers/factory/NotificationCreator.java)
+- Concrete creators: [EmailNotificationCreator.java](/dp-factory/src/main/java/com/absolute/bonkers/factory/EmailNotificationCreator.java), [SmsNotificationCreator.java](/dp-factory/src/main/java/com/absolute/bonkers/factory/SmsNotificationCreator.java), and [PushNotificationCreator.java](/dp-factory/src/main/java/com/absolute/bonkers/factory/PushNotificationCreator.java)
+- Products: [Notification.java](/dp-factory/src/main/java/com/absolute/bonkers/factory/Notification.java) and its email, SMS, and push implementations
+
+The original Spring registry example remains available as a separate practical variation:
+[NotificationFactory.java](/dp-factory/src/main/java/com/absolute/bonkers/factory/NotificationFactory.java).
+The focused Factory Method tests are in [NotificationCreatorTest.java](/dp-factory/src/test/java/com/absolute/bonkers/factory/NotificationCreatorTest.java).
 
 Interface:
 *[Notification (interface)](/dp-factory/src/main/java/com/absolute/bonkers/factory/Notification.java)*<br>

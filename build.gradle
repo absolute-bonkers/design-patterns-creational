@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '3.4.0-SNAPSHOT'
+    id 'org.springframework.boot' version '3.3.4'
     id 'io.spring.dependency-management' version '1.1.6'
 }
 
@@ -12,6 +12,12 @@ allprojects {
 // we have to provide one main class path, hence given singleton path
 springBoot {
     mainClass = 'com.absolute.bonkers.singleton.SingletonApplication' // Adjust accordingly
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
 }
 
 repositories {

@@ -21,3 +21,19 @@ The Prototype Pattern is all about creating new objects by copying existing ones
 *In software design, the Prototype Pattern is your go-to for creating objects efficiently by cloning existing ones rather than starting from scratch.<br/>
 Whether you’re duplicating complex objects, creating variations of a base model, or building rapid prototypes, the Prototype Pattern keeps the process smooth and resource-friendly.<br/>
 So, the next time you need multiple versions of an object, remember the Prototype Pattern and clone with confidence! 🏆✨*
+
+### 💻 Java Example
+
+`Recipe` acts as a prototype. Its `copy()` method creates an independent recipe that can be customized without changing the original:
+
+```java
+Recipe original = new Recipe("Vegetable soup", List.of("carrot", "potato"));
+Recipe variation = original.copy();
+variation.setName("Spicy vegetable soup");
+variation.addIngredient("chili");
+```
+
+- [Recipe.java](src/main/java/com/absolute/bonkers/prototype/Recipe.java)
+- [RecipeTest.java](src/test/java/com/absolute/bonkers/prototype/RecipeTest.java)
+
+Run this module's tests with `./gradlew :dp-prototype:test` from the repository root.
